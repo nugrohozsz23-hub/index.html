@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Anniversary, Sayang!</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background-color: #ffe6e9;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            text-align: center;
+            padding: 20px;
+        }
+        .card {
+            background: #ffffff;
+            padding: 40px 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            max-width: 450px;
+            width: 100%;
+        }
+        .heart {
+            font-size: 50px;
+            color: #ff4d6d;
+            animation: pulse 1.2s infinite;
+        }
+        h1 {
+            color: #c9184a;
+            font-size: 24px;
+            margin: 15px 0;
+        }
+        p {
+            color: #555;
+            line-height: 1.6;
+            font-size: 15px;
+            margin-bottom: 25px;
+        }
+        button {
+            background-color: #ff4d6d;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            font-size: 14px;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        button:hover {
+            background-color: #c9184a;
+        }
+        #message {
+            display: none;
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #fff0f3;
+            border-left: 4px solid #ff4d6d;
+            border-radius: 5px;
+            color: #800f2f;
+            font-style: italic;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.15); }
+            100% { transform: scale(1); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <div class="heart">❤️</div>
+        <h1>Happy Anniversary, Sayang!</h1>
+        <p>Makasih ya udah menemani perjalanan sejauh ini. Nggak sabar buat melangkah ke jenjang berikutnya dan menghabiskan sisa hidupku bareng kamu.</p>
+        
+        <button onclick="showMessage()">Klik Kalau Sayang</button>
+        
+        <div id="message">
+            "Kamu adalah alasan aku selalu bersemangat menyambut esok hari. Tetap sama-sama terus ya, calon istriku! 💍✨"
+        </div>
+    </div>
+
+    <script>
+        function showMessage() {
+            var msg = document.getElementById("message");
+            if (msg.style.display === "block") {
+                msg.style.display = "none";
+            } else {
+                msg.style.display = "block";
+            }
+        }
+    </script>
+
+</body>
+</html>
